@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conversion Calculator</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		table{
+			text-align: center;
+			background-color: #FFFFFF;
+			margin-top: 250px;
+		}
+	</style>
+</head>
+<body style="background-color: #AAD3D0;">
+	<center>
+	<table cellpadding="25px">
+		<tr>
+			<td>
+				<h3>length converter</h3>
+				<h6>millimeters → meters/centimeters/kilometers</h6><br>
+				<input type="text" id="id1"> <br>
+				<p id="scrunkly"></p><br>
+				<input type="submit" value="to meters" onclick="hatdog()" class="bg-dark text-light rounded">
+				<input type="submit" value="to centimeters" onclick="hatdog2()" class="bg-dark text-light rounded">
+				<input type="submit" value="to kilometers" onclick="hatdog3()" class="bg-dark text-light rounded">
+				
+					
+					<script>
+						function hatdog() {
+							var scrunkly = document.getElementById('id1').value;
+							var answer = Number(scrunkly) / Number(10);
+							document.getElementById('scrunkly').innerHTML = answer + "m";
+						}
+						function hatdog2() {
+							var scrunkly = document.getElementById('id1').value;
+							var answer = Number(scrunkly) / Number(1000);
+							document.getElementById('scrunkly').innerHTML = answer + "cm";
+						}
+						function hatdog3() {
+							var scrunkly = document.getElementById('id1').value;
+							var answer = Number(scrunkly) / Number(1000000);
+							document.getElementById('scrunkly').innerHTML = answer + "km";
+						}
+					</script>
+				</td>
+			</tr>
+	</table>
+	</center>
+</body>
+</html>
